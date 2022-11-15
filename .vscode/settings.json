@@ -1,0 +1,39 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.autoIndent": "advanced",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
+    "[markdown]": {
+        "editor.formatOnSave": false
+    },
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "120",
+        "--experimental"
+    ],
+    "python.analysis.completeFunctionParens": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120",
+        "--ignore=203,E266,E501,W503,F403,F401,E402"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "files.exclude": {
+        "LICENSE": true,
+        ".venv": true,
+        "*/**/__pycache__": true,
+        "*/**/*.pyc": true
+    }
+}
