@@ -18,6 +18,8 @@ Before starting with the analysis tasks please make sure that in `src/utils/conf
 5. Plot temporal heatmap of trends: `pipenv run main --plot_timeline`
 6. Plot alluvial diagram: `pipenv run plot-alluvial 13` (snapshot id: 13)
 
+To run all the steps at once just execute the following command: `bash ./scripts/run.sh` (immediate logs are saved for later use)
+
 ## Data requirements
 
 1. Hashtag occurrence data should be stored in the `data/nodes` folder. For each snapshot one `.csv` file should be provided. It should be named by following this convention: `<unix time stamp start>-<unix time stamp stop>.csv`. Sample data (e.g., stored in the file `1609459200-1612137600.csv`) might look like this (including the csv header):
