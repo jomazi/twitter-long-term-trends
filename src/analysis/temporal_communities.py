@@ -35,7 +35,7 @@ def temporal_communities():
 
         # remove "unimportant" nodes (degree below median)
         median = degree_distro(degrees=g.degree(), file=os.path.join(
-            "figures/degree-distro", f.split(".pkl")[0], ".png"))
+            "figures/degree-distro", f.split(".pkl")[0] + ".png"))
         g.delete_vertices(g.vs.select(_degree_lt=median))
 
         # weights of nodes = node occurrence during time window
