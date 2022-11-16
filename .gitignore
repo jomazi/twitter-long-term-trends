@@ -1,7 +1,11 @@
 # data
-data/*.csv
-data/*/*
-!data/*/.gitkeep
+data/edges/*
+!data/edges/.gitkeep
+data/nodes/*
+!data/nodes/.gitkeep
+data/tweets.csv
+data/trends/*/*/*
+!data/trends/*/*/.gitkeep
 
 # figures
 figures/*/*
