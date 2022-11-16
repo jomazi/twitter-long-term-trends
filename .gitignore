@@ -13,7 +13,7 @@ figures/timeline.png
 !figures/*/.gitkeep
 
 # log
-main.log
+*.log
 
 # python
 __pycache__
