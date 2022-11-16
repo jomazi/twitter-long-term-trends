@@ -4,6 +4,8 @@ import igraph as ig
 import matplotlib.pyplot as plt
 import powerlaw as pl
 
+from .model import Edge, EdgeType, Network, Node, NodeType
+
 
 def detect_communities(g: ig.Graph, method: str, membership: bool = True, initial_membership: list[int] = []):
     """
@@ -169,3 +171,42 @@ def graph_union(g1: ig.Graph, g2: ig.Graph) -> ig.Graph:
     g_res.vs["weight"] = [node_weights[v["name"]] for v in g_res.vs]
 
     return g_res
+
+
+def igraph2trend(g: ig.Graph, trend_score: float) -> Network:
+    """
+    Extract trend network from igraph network instance.
+
+    Parameter:
+    - g: igraph network instance
+    - trend_score: trend score associated with trend network
+
+    Return:
+    - trend network
+    """
+
+    assert g.is_simple(), "Graph has to be simple."
+
+    # normalize centrality
+    centralities = g.pagerank()
+    total_centrality = sum(centralities)
+    normalized_centralities = [c / total_centrality for c in centralities]
+    g.vs["centrality"] = normalized_centralities
+
+    # subgraph of most central nodes
+    min_centrality = sorted(centralities, reverse=True)[:10][-1]
+    central_nodes = g.vs.select(lambda v: v["centrality"] >= min_centrality)[:10]
+    g_central = g.induced_subgraph(central_nodes)
+
+    # extract nodes
+    nodes = []
+    for v in g_central.vs():
+        n = Node(id=v.index, name=v["name"], weight=v["centrality"], typ=NodeType.hashtag)
+        nodes.append(n)
+
+    # extract edges
+    edges = []
+    for e in g_central.es():
+        edges.append(Edge(node_id_1=e.tuple[0], node_id_2=e.tuple[1], weight=e["weight"], typ=EdgeType.co_occurrence))
+
+    return Network(nodes=nodes, edges=edges, trend_score=trend_score)
