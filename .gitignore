@@ -1,0 +1,17 @@
+# data
+data/*.csv
+data/*/*
+!data/*/.gitkeep
+
+# figures
+figures/*/*
+!figures/*/.gitkeep
+
+# log
+main.log
+
+# python
+__pycache__
+
+# misc
+.DS_Store
