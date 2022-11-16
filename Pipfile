@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+autopep8 = "*"
+
+[packages]
+scipy = "*"
+numpy = "*"
+matplotlib = "*"
+pandas = "*"
+python-igraph = "*"
+python-dateutil = "*"
+powerlaw = "*"
+pycairo = "*"
+tqdm = "*"
+
+[scripts]
+main = 'bash -c "python ./src/main.py ${0}"'
+
+[requires]
+python_version = "3.9"
