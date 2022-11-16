@@ -1,3 +1,4 @@
+from .plot_alluvial import *
 from .plot_network import *
 from .plot_timeline import *
 from .prepare_data import *

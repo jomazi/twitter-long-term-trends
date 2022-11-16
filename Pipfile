@@ -22,6 +22,7 @@ pydantic = "*"
 [scripts]
 main = 'bash -c "python ./src/main.py ${0}"'
 plot-network = 'bash -c "python ./src/main.py --plot_network ${0} ${1}"'
+plot-alluvial = 'bash -c "python ./src/main.py --plot_alluvial ${0}"'
 
 [requires]
 python_version = "3.9"

@@ -16,6 +16,7 @@ Before starting with the analysis tasks please make sure that in `src/utils/conf
 3. Extract trends: `pipenv run main --trends`
 4. Plot trend network: e.g., `pipenv run plot-network 0 0` (snapshot id: 0, trend id: 0) or `pipenv run plot-network 10 0` (snapshot id: 10, trend id: 0)
 5. Plot temporal heatmap of trends: `pipenv run main --plot_timeline`
+6. Plot alluvial diagram: `pipenv run plot-alluvial 13` (snapshot id: 13)
 
 ## Data requirements
 
