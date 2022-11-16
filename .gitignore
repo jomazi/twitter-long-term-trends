@@ -9,6 +9,7 @@ data/trends/*/*/*
 
 # figures
 figures/*/*
+figures/timeline.png
 !figures/*/.gitkeep
 
 # log
