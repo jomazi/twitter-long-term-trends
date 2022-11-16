@@ -22,7 +22,7 @@
     "python.linting.enabled": true,
     "python.linting.flake8Args": [
         "--max-line-length=120",
-        "--ignore=203,E266,E501,W503,F403,F401,E402"
+        "--ignore=203,E266,E501,W503,F403,F401,E402,E741"
     ],
     "python.envFile": "${workspaceFolder}/.env",
     "[python]": {

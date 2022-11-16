@@ -9,9 +9,10 @@
 
 ## Analysis tasks
 
-Before starting with the analysis tasks please make sure that in `src/utils/config.py` the configuration is set according to your needs.
+Before starting with the analysis tasks please make sure that in `src/utils/config.py` the configuration is set according to your needs. After that the following analysis tasks can be executed (please take the chronological order into account):
 
 1. Prepare data: `pipenv run main --prepare`
+2. Detect temporal communities: `pipenv run main --communities`
 
 ## Data requirements
 

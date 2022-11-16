@@ -17,6 +17,7 @@ python-dateutil = "*"
 powerlaw = "*"
 pycairo = "*"
 tqdm = "*"
+pydantic = "*"
 
 [scripts]
 main = 'bash -c "python ./src/main.py ${0}"'
