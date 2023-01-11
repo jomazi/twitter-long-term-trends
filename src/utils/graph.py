@@ -94,7 +94,7 @@ def degree_distro(degrees: list[int], file: str) -> float:
         raise Exception("Median of power law cannot be determined.")
 
     plt.axvline(x=median, ymin=0.05, ymax=0.95, color="black",
-                linestyle="dotted", label=rf"$k_{{1/2}} = {round(median, 2)}$")
+                linestyle="dotted", label=rf"$k_{{med}} = {round(median, 2)}$")
 
     ax.set_xscale("log", base=10)
     ax.set_yscale("log", base=10)
